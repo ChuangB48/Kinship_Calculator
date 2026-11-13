@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            親屬計算機
+        </title>
+        <link href="index.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <div id="board">
+            <div id="question">
+                <span id="question_text">
+                    我
+                </span>
+            </div>
+            <div id="answer">
+                <span id="answer_text">
+                    我
+                </span>
+            </div>
+        </div>
+        <div id="all_clear" class="button" onclick="javascript:all_clear()">
+            <div class="hover_background"></div>
+            <span class="button_text">
+                AC
+            </span>
+        </div>
+        <div id="dad" class="button" onclick="javascript:calculate(58)">
+            <div class="hover_background"></div>
+            <span class="button_text">
+                爸爸
+            </span>
+        </div>
+        <div id="mom" class="button" onclick="javascript:calculate(59)">
+            <div class="hover_background"></div>
+            <span class="button_text">
+                媽媽
+            </span>
+        </div>
+        <div id="equal" class="button" onclick="javascript:equal()">
+            <div class="hover_background"></div>
+            <span class="button_text">
+                =
+            </span>
+        </div>
+        <script src="relations.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
