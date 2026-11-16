@@ -1,20 +1,41 @@
-let memory=0;
+let memory=[];
 function calculate(event){
     rollback();
-    document.getElementById("question_text").innerHTML+="&nbsp;的&nbsp;"+relatives[event];
-    memory=relatives_table[memory][event];
-    if(memory===-1){
-        document.getElementById("answer_text").innerHTML="無法查詢";
-    }
-    else{
-        document.getElementById("answer_text").innerHTML=relatives[memory];
-    }
+    memory.push(event);
+    render();
 }
 function all_clear(){
     rollback();
-    document.getElementById("question_text").innerHTML="我";
-    document.getElementById("answer_text").innerHTML="我";
-    memory=0;
+    memory=[];
+    render();
+}
+function back(){
+    rollback();
+    memory.pop();
+    render();
+}
+function render(){
+    rollback();
+    document.getElementById("question_text").innerHTML="";
+    document.getElementById("answer_text").innerHTML="";
+    let point=-2;
+    for(let a=0;a<memory.length;a++){
+        if(point===-2){
+            document.getElementById("question_text").innerHTML=buttons[0][memory[a]];
+            point=buttons[1][memory[a]];
+            document.getElementById("answer_text").innerHTML=buttons[0][memory[a]];
+        }
+        else{
+            document.getElementById("question_text").innerHTML+="&ensp;的&ensp;"+buttons[0][memory[a]];
+            point=relatives_table[point][memory[a]];
+            if(point===-1){
+                document.getElementById("answer_text").innerHTML="無法顯示";
+            }
+            else{
+                document.getElementById("answer_text").innerHTML=relatives[point];
+            }
+        }
+    }
 }
 function equal(){
     rollback();

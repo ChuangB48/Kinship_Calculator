@@ -40,7 +40,6 @@ body{
     z-index: 1;
 }
 #answer_text{
-    position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
@@ -48,33 +47,74 @@ body{
     font-size: x-large;
 }
 #all_clear{
-    position: absolute;
-    left: 5%;
+    left: 75%;
     top: 30%;
-    width: 15%;
-    height: 15%;
+    background-color: #FF4A8D !important;
+}
+#back{
+    left: 75%;
+    top: 45%;
     background-color: #FF4A8D !important;
 }
 #dad{
-    position: absolute;
-    left: 25%;
+    left: 15%;
     top: 30%;
-    width: 15%;
-    height: 15%;
 }
 #mom{
-    position: absolute;
+    left: 30%;
+    top: 30%;
+}
+#older_brother{
     left: 45%;
     top: 30%;
-    width: 15%;
-    height: 15%;
+}
+#younger_brother{
+    left: 60%;
+    top: 30%;
+}
+#older_sister{
+    left: 15%;
+    top: 45%;
+}
+#younger_sister{
+    left: 30%;
+    top: 45%;
+}
+#husband{
+    left: 45%;
+    top: 45%;
+}
+#wife{
+    left: 60%;
+    top: 45%;
+}
+#older_son{
+    left: 15%;
+    top: 60%;
+}
+#younger_son{
+    left: 30%;
+    top: 60%;
+}
+#older_daughter{
+    left: 45%;
+    top: 60%;
+}
+#younger_daughter{
+    left: 60%;
+    top: 60%;
+}
+#boy_me{
+    left: 15%;
+    top: 75%;
+}
+#girl_me{
+    left: 30%;
+    top: 75%;
 }
 #equal{
-    position: absolute;
-    left: 80%;
-    top: 30%;
-    width: 15%;
-    height: 65%;
+    left: 75%;
+    top: 60%;
     background-color: #FF4A8D !important;
 }
 .button{
@@ -109,4 +149,7 @@ body{
 .button:hover .hover_background{
     left: -5%;
     top: -5%;
+}
+.shrink{
+    font-size: medium !important;
 }
